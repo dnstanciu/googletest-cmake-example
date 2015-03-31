@@ -4,10 +4,19 @@ compiler:
     - clang
 
 before_install:
-# Install a newer CMake as Travis only supports v2.8.7.
-  - sudo add-apt-repository --yes ppa:kalakris/cmake
-  - sudo apt-get update -qq
-  - sudo apt-get install cmake
+    # Add g++4.8 PPA
+    - if [ "$CXX" == "g++" ]; then sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test; fi
+
+    # Add a PPA with a newer CMake as Travis only supports v2.8.7.
+    - sudo add-apt-repository --yes ppa:kalakris/cmake
+
+    - sudo apt-get update -qq
+
+install:
+    # Install g++4.8
+    - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++-4.8; fi
+    # Install CMake
+    - sudo apt-get install cmake
 
 before_script:
     - mkdir build
