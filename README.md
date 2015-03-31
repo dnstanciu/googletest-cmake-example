@@ -1,6 +1,7 @@
 # GoogleTest CMake Example
 
 Integration of Google Test with CMake.
+
 Google Test is downloaded, configured and built within the project.
 
 
