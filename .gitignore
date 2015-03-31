@@ -6,6 +6,8 @@
 bin/
 # ignore idea configuration files
 .idea/
+# ignore build folder used for testing
+build/
 
 ###########
 ### C++ ###
