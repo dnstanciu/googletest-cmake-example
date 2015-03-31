@@ -1,5 +1,7 @@
 # GoogleTest CMake Example
 
+[![Build Status](https://travis-ci.org/dnstanciu/googletest-cmake-example.svg?branch=master)](https://travis-ci.org/dnstanciu/googletest-cmake-example)
+
 Integration of Google Test with CMake.
 
 Google Test is downloaded, configured and built within the project.
