@@ -14,7 +14,10 @@ before_install:
 
 install:
     # Install g++4.8
-    - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++-4.8; fi
+    - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq gcc-4.8 g++-4.8; fi
+    # Compile with g++ 4.8 when rather than the default g++
+    - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.8 90
+
     # Install CMake
     - sudo apt-get install cmake
 
