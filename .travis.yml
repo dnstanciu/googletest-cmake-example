@@ -25,5 +25,10 @@ before_script:
     - mkdir build
     - cd build
     - cmake ..
+    - make
 
-script: make && cd bin && ./Sample_test
+script:
+    - ctest -VV
+
+notifications:
+    email: false

@@ -1,5 +1,3 @@
-enable_testing()
-
 find_package(Threads REQUIRED)
 
 # Enable ExternalProject CMake module
@@ -38,6 +36,9 @@ add_executable(Sample_test main.cpp sampleTest.cpp)
 
 target_link_libraries(Sample_test libgtest)
 
+add_test(NAME Sample_test
+         COMMAND Sample_test)
+
 # an executable for testing the Addition class
 add_executable(runAddition_test main.cpp AdditionTest.cpp)
 
@@ -45,3 +46,6 @@ target_link_libraries(runAddition_test
     libgtest
     googletest-cmake-example_lib
 )
+
+add_test(NAME runAddition_test
+         COMMAND runAddition_test)
