@@ -15,6 +15,6 @@ TEST_F(AdditionTest, twoValues)
     const int y = 3;
     Addition addition;
     EXPECT_EQ(5, addition.twoValues(x, y));
-    EXPECT_EQ(10, addition.twoValues(5, 5));
+    EXPECT_EQ(10, addition.twoValues(5, 6));
 }
 
